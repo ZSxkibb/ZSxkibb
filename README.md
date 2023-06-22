@@ -1,8 +1,28 @@
-<body>
-  <h1>Anime</h1>
-    <div id="introduction">
-      <h2>There is many animes out there. There are alot that can entertain people in society. Here is a list of animes</h2>
-      <ul>
-        <li><strong>One peice</strong></li>
-        </ul>
-          <img src= https://cdn.vox-cdn.com/thumbor/gERBsgq0X_Tp8-f_KzGTmS3hVm8=/0x0:1280x738/920x613/filters:focal(538x267:742x471):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/65232906/one_piece.0.png>
+player1_score = 0
+player2_score = 0
+
+
+for i in range(10):
+
+    
+    player1_value = random.randint(1, 6)
+    player2_value = random.randint(1, 6)
+
+    
+    print("Player 1 rolled: ", player1_value)
+    print("Player 2 rolled: ", player2_value)
+
+    if player1_value > player2_value:
+        print("player 1 wins.")
+        player1_score = player1_score + 1 
+    elif player2_value > player1_value:
+        print("player 2 wins")
+        player2_score = player2_score + 1
+    else:
+        print("It's a draw")
+
+    input("Press enter to continue.")  
+
+print("### Game Over ###")
+print("Player 1 score:", player1_score)
+print("Player 2 score:", player2_score)
